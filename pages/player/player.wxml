@@ -1,0 +1,29 @@
+<view class="page-body">
+  <view class="page-section tc">
+    <live-player id="player" src="rtmp://39.108.58.88:1935/video_chat/hello?token=token123456" mode="RTC" autoplay bindstatechange="statechange" binderror="error" />
+    <live-pusher id="pusher" url="rtmp://39.108.58.88:1935/video_chat/hello1?token=token123456" mode="RTC" autopush bindstatechange="statechange" />
+    <view class="btn-area">
+      <button bindtap="bindPlay" class="page-body-button" type="primary">播放</button>
+      <button bindtap="bindPause" class="page-body-button" type="primary">暂停</button>
+      <button bindtap="bindStop" class="page-body-button" type="primary">停止</button>
+      <button bindtap="bindResume" class="page-body-button" type="primary">恢复</button>
+      <button bindtap="bindMute" class="page-body-button" type="primary">静音</button>
+    </view>
+  </view>	
+	
+	 <view wx:if="{{!curGoodsKanjia}}" class="footer-box">
+	  <view class="contact">
+	    <contact-button style="opacity:0;position:absolute;" type="default-dark" session-from="weapp" size="27"></contact-button>
+	    <view style='position:absolute;bottom:10rpx;'> 客服 </view>
+	  </view>
+	  <view class="shop-cart-btn" bindtap="goShopCar">
+	    <view class="shop-num">({{shopNum}})</view>
+	    <view style='position:absolute;bottom:10rpx;'> 购物车 </view>
+	  </view>
+	  <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="toAddShopCar">加入购物车</view>
+	  <view wx:if="{{!goodsDetail.basicInfo.pingtuan}}" class="now-buy" bindtap="tobuy">立即购买</view>
+	  <view wx:if="{{goodsDetail.basicInfo.pingtuan}}" class="join-shop-cart" bindtap="tobuy">单独购买</view>
+	  <view wx:if="{{goodsDetail.basicInfo.pingtuan}}" class="now-buy" bindtap="toPingtuan">发起拼团</view>
+	</view>
+	
+</view>

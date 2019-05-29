@@ -1,0 +1,13 @@
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+
+live-pusher {
+  margin: 0 auto;
+  width: 100%;
+  height: 225px;
+}
+live-player {
+  width: 100%;
+  height: 225px;
+}
