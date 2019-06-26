@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+	<button type="primary" bindtap="initWs">初始化websocket</button>
+	<button type="primary" bindtap="sendMsg">发送消息</button>
+	<button type="primary" bindtap="close">主动关闭</button>
+</view>

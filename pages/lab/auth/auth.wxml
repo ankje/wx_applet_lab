@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="container">
-	<button bindtap="bandLoginAndGetSession">登录获取session</button>
+	<button bindtap="bandLoginAndGetSession" open-type="getUserInfo">登录获取session</button>
 </view>

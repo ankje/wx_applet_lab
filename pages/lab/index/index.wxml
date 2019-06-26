@@ -1,0 +1,6 @@
+<view class="section">
+  <button data-url="/pages/lab/auth/auth" bindtap="toPage" type="primary" size="mini"  plain hover-class="other-button-hover"> 授权 </button>
+  <button data-url="/pages/lab/websocket/index" bindtap="toPage" type="primary" size="mini"  plain hover-class="other-button-hover"> websocket </button>
+  <button data-url="/pages/lab/video_chat/index" bindtap="toPage" type="primary" size="mini"  plain hover-class="other-button-hover"> 视频聊天 </button>
+  <button data-url="/pages/lab/savefiletolocal/index" bindtap="toPage" type="primary" size="mini"  plain hover-class="other-button-hover"> 保存网络文件到本地 </button>
+</view>

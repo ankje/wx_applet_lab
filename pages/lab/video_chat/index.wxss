@@ -1,0 +1,46 @@
+.container {
+	margin-top: 10px;
+	/* display: flex;
+  flex-direction: column; */
+	align-items: center;
+}
+
+.container button {
+	margin-top: 10px;
+}
+
+.doctor-view,
+.patient-view {
+	width: 100%;
+}
+
+.video-wrap {
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+.player-wrap {
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0 auto;
+	width: 100%;
+	height: 300px;
+}
+
+.pusher-wrap {
+	z-index: 2;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 80px;
+	height: 100px;
+}
+
+live-player,
+live-pusher {
+	width: 100%;
+	height: 100%;
+}

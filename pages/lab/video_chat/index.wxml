@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+	<text>{{info}}</text>
+	<view class="video-wrap">
+		<view class="pusher-wrap">
+			<live-pusher id="pusher" url="{{pushUrl}}" mode="RTC" autopush />			
+		</view>
+		<view class="player-wrap">			
+			<live-player id="player" src="{{playSrc}}" mode="RTC" autoplay />
+		</view>
+	</view>
+	<view wx:if="{{isDoctor}}" class="doctor-view">
+		医生端
+		<view class="row-wrap">
+			<view class="label">服务id</view>
+			<view class="label-right">
+				<input bindinput="inputedit" name="srv_vc_id" class="input" type="text" placeholder="服务id" data-obj="room" data-item="srv_vc_id" value="{{room.srv_vc_id}}"/>
+			</view>
+		</view>
+		<view class="row-wrap">
+			<view class="label">呼叫用户的uid</view>
+			<view class="label-right">
+				<input bindinput="inputedit" name="to_user_id" class="input" type="text" placeholder="呼叫用户的uid" data-obj="room" data-item="to_user_id" value="{{room.to_user_id}}"/>
+			</view>
+		</view>
+		<button type="primary" bindtap="call">拨打视频电话</button>
+		<button type="primary" bindtap="hangUp">挂断视频电话</button>
+	</view>	
+	<view wx:if="{{!isDoctor}}" class="patient-view">
+		患者端		
+		<view class="row-wrap">
+			<view class="label">房间id</view>
+			<view class="label-right">
+				<input name="room_id" bindinput="inputedit" class="input" type="text" placeholder="房间id" data-obj="room" data-item="room_id" value="{{room.room_id}}"/>
+				<button type="primary" bindtap="joinRoom">进入房间</button>
+			</view>
+		</view>
+		<button type="primary" bindtap="call">拨打视频电话</button>
+		<button type="primary" bindtap="hangUp">挂断视频电话</button>
+	</view>
+</view>

@@ -57,4 +57,7 @@ module.exports = {
   postOauth: (data) => {
     return request('/auth/oauth', true, 'post', data)
   },
+  call: (data) => {
+    return request('/video_chat/call', true, 'post', data)
+  },
 }

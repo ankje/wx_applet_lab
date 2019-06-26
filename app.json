@@ -1,10 +1,14 @@
 {
   "pages": [
-    "pages/test/test",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/pusher/pusher",
-    "pages/player/player"
+		"pages/lab/index/index",
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/pusher/pusher",
+		"pages/player/player",
+		"pages/lab/auth/auth",
+		"pages/lab/websocket/index",
+		"pages/lab/video_chat/index",
+		"pages/lab/savefiletolocal/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -38,8 +42,8 @@
       {
         "selectedIconPath": "images/my.png",
         "iconPath": "images/my.png",
-        "pagePath": "pages/test/test",
-        "text": "测试接口"
+        "pagePath": "pages/lab/index/index",
+        "text": "实验室"
       }
     ]
   },
